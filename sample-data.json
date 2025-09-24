@@ -1,0 +1,21 @@
+{
+  "stats": {
+    "totalUsers": 1245,
+    "activeUsers": 984,
+    "itemsInStock": 3457,
+    "ordersToday": 142
+  },
+  "sales": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+    "data": [1200, 1500, 1800, 2200, 2000, 2400, 2800]
+  },
+  "stock": {
+    "labels": ["Electronics", "Apparel", "Groceries", "Books", "Furniture"],
+    "data": [350, 420, 500, 260, 300]
+  },
+  "recent": [
+    { "user": "John Doe", "action": "Added new inventory item", "date": "2025-08-10" },
+    { "user": "Jane Smith", "action": "Updated item stock", "date": "2025-08-09" },
+    { "user": "Michael Lee", "action": "Removed inventory item", "date": "2025-08-08" }
+  ]
+}

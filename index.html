@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><span class="logo-dot"></span> INVENTORY</div>
+        <div class="header-actions">
+            <input id="jsonUpload" type="file" accept=".json,application/json" hidden>
+            <label for="jsonUpload" class="btn primary" title="Upload a JSON file to populate the dashboard">Upload JSON</label>
+            <button id="theme-toggle" class="icon-btn" title="Toggle theme" aria-label="Toggle theme"></button>
+            <div class="profile">Admin</div>
+        </div>
+    </header>
+    <main class="main-content">
+        <h1>Dashboard Overview</h1>
+        <section class="stats">
+            <div class="card stat-card">
+                <div class="stat-icon bg-blue">👥</div>
+                <div class="stat-meta">
+                    <h2>Total Users</h2>
+                    <p id="stat-totalUsers" class="stat-value">—</p>
+                </div>
+            </div>
+            <div class="card stat-card">
+                <div class="stat-icon bg-green">✅</div>
+                <div class="stat-meta">
+                    <h2>Active Users</h2>
+                    <p id="stat-activeUsers" class="stat-value">—</p>
+                </div>
+            </div>
+            <div class="card stat-card">
+                <div class="stat-icon bg-purple">📦</div>
+                <div class="stat-meta">
+                    <h2>Items in Stock</h2>
+                    <p id="stat-itemsInStock" class="stat-value">—</p>
+                </div>
+            </div>
+            <div class="card stat-card">
+                <div class="stat-icon bg-orange">🛒</div>
+                <div class="stat-meta">
+                    <h2>Orders Today</h2>
+                    <p id="stat-ordersToday" class="stat-value">—</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="charts">
+            <div class="chart-card">
+                <h2>Monthly Sales</h2>
+                <canvas id="salesChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h2>Stock Levels by Category</h2>
+                <canvas id="stockChart"></canvas>
+            </div>
+        </section>
+
+        <section class="recent">
+            <h2>Recent Activity</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Action</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="recentBody">
+                    <tr class="empty-row"><td colspan="3">Upload a JSON file to see recent activity.</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        &copy;2025 (SAMPLE) Inventory Management System Dashboard
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>
